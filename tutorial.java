@@ -33,15 +33,20 @@ public class tutorial extends OpMode {
         float RightX = gamepad1.right_stick_x;
         float RightY = gamepad1.left_stick_y;
 
-        motor_topLeft.setPower(leftY);
-        motor_topRight.setPower(-leftY/2);
-        motor_botLeft.setPower(leftY/2);
-        motor_botRight.setPower(-leftY/2);
+        motor_topLeft.setPower(-leftY);
+        motor_topRight.setPower(-leftY);
+        motor_botLeft.setPower(leftY);
+        motor_botRight.setPower(leftY);
 
-        motor_topLeft.setPower(-RightX);
-        motor_topRight.setPower(-RightX/2);
-        motor_botLeft.setPower(-RightX/2);
-        motor_botRight.setPower(-RightX/2);
+        motor_topLeft.setPower(-leftX);
+        motor_topRight.setPower(-leftX);
+        motor_botLeft.setPower(-leftX);
+        motor_botRight.setPower(-leftX);
+
+        motor_topLeft.setPower(RightX);
+        motor_topRight.setPower(-RightX);
+        motor_botLeft.setPower(RightX);
+        motor_botRight.setPower(-RightX);
 
         if(gamepad1.a){;
             servo.setPosition(0);
